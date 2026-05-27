@@ -115,11 +115,11 @@
     <a href="mailto:DavidsonProperties@pm.me">✉ DavidsonProperties@pm.me</a>
   </div>
 </div>
-<div class="notice-bar">Unit B · 3 Bed / 1 Bath · Basement · Separate Entrance · Utilities Billed by Landlord · Street Parking</div>
+<div class="notice-bar">Unit B · 3 Bed / 1 Bath · Basement · Separate Entrance · Fenced Backyard — Shared Between Unit B &amp; Unit C · Lawn Care Included · Utilities Billed by Landlord · Street Parking</div>
 
 <div class="container">
   <div class="intro-card">
-    <strong>Unit B</strong> is a 3-bedroom, 1-bathroom basement-level residence with a separate exterior entrance and designated backyard access. Street parking only — no dedicated off-street space. All utilities remain in <strong>Davidson Properties Group, LLC's</strong> name — tenant shall not transfer any utility to their own name. Tenant is billed the exact electric amount plus 40% of the water bill, attached to monthly rent. Rent is due the <strong>1st of each month</strong> with a grace period through the <strong>3rd</strong>. A <strong>$150 late fee</strong> applies to payments received after the 4th. An <strong>$60 application fee</strong> is due at application submission. Security deposit equal to one month's selected rent is due at lease signing. One small dog or cat permitted with a <strong>non-refundable $500 pet deposit</strong> and <strong>$40/month pet rent.</strong>
+    <strong>Unit B</strong> is a 3-bedroom, 1-bathroom basement-level residence with a separate exterior entrance and Fenced Backyard — Shared Between Unit B and Unit C. Street parking only — no dedicated off-street space. All utilities remain in <strong>Davidson Properties Group, LLC's</strong> name — tenant shall not transfer any utility to their own name. Tenant is billed the exact electric amount plus 40% of the water bill, attached to monthly rent. Rent is due the <strong>1st of each month</strong> with a grace period through the <strong>3rd</strong>. A <strong>$150 late fee</strong> applies to payments received after the 4th. An <strong>$60 application fee</strong> is due at application submission. Security deposit equal to one month's selected rent is due at lease signing. One small dog or cat permitted with a <strong>non-refundable $500 pet deposit</strong> and <strong>$40/month pet rent.</strong>
   </div>
 
   <form id="rentalApp" action="https://formspree.io/f/xeedpnja" method="POST">
@@ -180,15 +180,16 @@
         </div>
         <div class="form-grid" style="margin-top:0.75rem;">
           <div class="form-group"><label>Monthly Rent <span class="req">✦</span></label><input type="text" name="curr_rent" placeholder="$0.00" required></div>
-          <div class="form-group"><label>Dates of Residence <span class="req">✦</span></label><input type="text" name="curr_dates" placeholder="MM/YYYY – Present" required></div>
+          
         </div>
         <div class="form-grid" style="margin-top:0.75rem;">
-          <div class="form-group"><label>Landlord Name</label><input type="text" name="curr_landlord"></div>
-          <div class="form-group"><label>Landlord Phone</label><input type="tel" name="curr_ll_phone" placeholder="(xxx) xxx-xxxx"></div>
+          <div class="form-group"><label>Landlord Name <span class="req">&#10022;</span></label><input type="text" name="curr_landlord" required></div>
+          <div class="form-group"><label>Landlord Phone <span class="req">&#10022;</span></label><input type="tel" name="curr_ll_phone" placeholder="(xxx) xxx-xxxx" required></div>
         </div>
         <div class="form-group" style="margin-top:0.75rem;"><label>Reason for Leaving <span class="req">✦</span></label><input type="text" name="curr_reason" required></div>
         <hr class="divider">
-        <div class="sub-heading">Previous Address (if less than 3 years at current)</div>
+        <div id="prev_section">
+        <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.6rem;flex-wrap:wrap;"><div class="sub-heading" style="margin-bottom:0;border-bottom:none;padding-bottom:0;">Previous Address</div><span id="prev_req_note" style="display:none;font-size:0.7rem;font-weight:700;color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.6);padding:0.2rem 0.7rem;border-radius:3px;white-space:nowrap;">Required &#8212; Less than 3 years at current</span></div>
         <div class="form-grid full"><div class="form-group"><label>Street Address</label><input type="text" name="prev_addr"></div></div>
         <div class="form-grid three" style="margin-top:0.75rem;">
           <div class="form-group"><label>City</label><input type="text" name="prev_city"></div>
@@ -200,6 +201,8 @@
           <div class="form-group"><label>Landlord Name & Phone</label><input type="text" name="prev_landlord" placeholder="Name · (xxx) xxx-xxxx"></div>
         </div>
         <div class="form-group" style="margin-top:0.75rem;"><label>Reason for Leaving</label><input type="text" name="prev_reason"></div>
+        </div><!-- /prev_section -->
+        </div><!-- /prev_section -->
         <hr class="divider">
         <div class="form-group"><label>Have you ever been evicted or had a judgment for rent or damages? <span class="req">✦</span></label>
           <div class="radio-group"><label><input type="radio" name="eviction" value="No" required> No</label><label><input type="radio" name="eviction" value="Yes"> Yes — Explain</label></div>
@@ -213,12 +216,12 @@
       <div class="section-body">
         <div class="form-grid">
           <div class="form-group"><label>Employer / Income Source <span class="req">✦</span></label><input type="text" name="employer" required></div>
-          <div class="form-group"><label>Occupation</label><input type="text" name="occupation"></div>
+          <div class="form-group"><label>Occupation <span class="req">&#10022;</span></label><input type="text" name="occupation" required></div>
         </div>
         <div class="form-grid three" style="margin-top:0.75rem;">
-          <div class="form-group"><label>Employer Phone</label><input type="tel" name="emp_phone" placeholder="(xxx) xxx-xxxx"></div>
-          <div class="form-group"><label>Start Date</label><input type="text" name="emp_start" placeholder="MM/YYYY"></div>
-          <div class="form-group"><label>Employment Type</label><select name="emp_type"><option value="">— Select —</option><option>Full-Time</option><option>Part-Time</option><option>Self-Employed</option><option>Contract</option><option>Military</option><option>Retired</option><option>Other</option></select></div>
+          <div class="form-group"><label>Employer Phone <span class="req">&#10022;</span></label><input type="tel" name="emp_phone" placeholder="(xxx) xxx-xxxx" required></div>
+          <div class="form-group"><label>Start Date <span class="req">&#10022;</span></label><input type="text" name="emp_start" placeholder="MM/YYYY" required></div>
+          <div class="form-group"><label>Employment Type</label><select name="emp_type" required><option value="">— Select —</option><option>Full-Time</option><option>Part-Time</option><option>Self-Employed</option><option>Contract</option><option>Military</option><option>Retired</option><option>Other</option></select></div>
         </div>
         <div class="form-grid" style="margin-top:0.75rem;">
           <div class="form-group"><label>Gross Monthly Income <span class="req">✦</span></label><input type="text" name="gross_income" placeholder="$0.00" required></div>
@@ -287,34 +290,39 @@
         <div class="sub-heading">Household Occupants</div>
         <p style="font-size:0.82rem;color:var(--gray-dark);line-height:1.6;margin-bottom:1rem;">List all persons who will reside in the unit. Only persons listed on this application may occupy the unit. Applicant is automatically listed as Occupant 1. Maximum occupancy is 6 persons per the HUD Fair Housing Act (FHA) "two persons per bedroom" guideline (3-bedroom unit). No additional occupants beyond those listed herein are permitted.</p>
         <div class="form-group"><label>Total Occupants Including Applicant <span class="req">✦</span></label>
-          <select name="total_occupants" required><option value="">— Select —</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+          <select name="total_occupants" data-max="6" required><option value="">— Select —</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
         </div>
         <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.75rem;">
-          <div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
+          <div id="occ2_block" style="display:none;margin-top:0.75rem;"><div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
             <div class="form-group"><label>Occupant 2 — Full Name</label><input type="text" name="occ2_name" placeholder="Full legal name"></div>
             <div class="form-group"><label>Relationship to Applicant</label><select name="occ2_rel"><option value="">— Select —</option><option>Spouse</option><option>Domestic Partner</option><option>Child</option><option>Parent</option><option>Sibling</option><option>Roommate</option><option>Friend</option><option>Co-Worker</option><option>Other</option></select></div>
           </div>
-          <div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
+          </div>
+          <div id="occ3_block" style="display:none;margin-top:0.75rem;"><div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
             <div class="form-group"><label>Occupant 3 — Full Name</label><input type="text" name="occ3_name" placeholder="Full legal name"></div>
             <div class="form-group"><label>Relationship to Applicant</label><select name="occ3_rel"><option value="">— Select —</option><option>Spouse</option><option>Domestic Partner</option><option>Child</option><option>Parent</option><option>Sibling</option><option>Roommate</option><option>Friend</option><option>Co-Worker</option><option>Other</option></select></div>
           </div>
-          <div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
+          </div>
+          <div id="occ4_block" style="display:none;margin-top:0.75rem;"><div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
             <div class="form-group"><label>Occupant 4 — Full Name</label><input type="text" name="occ4_name" placeholder="Full legal name"></div>
             <div class="form-group"><label>Relationship to Applicant</label><select name="occ4_rel"><option value="">— Select —</option><option>Spouse</option><option>Domestic Partner</option><option>Child</option><option>Parent</option><option>Sibling</option><option>Roommate</option><option>Friend</option><option>Co-Worker</option><option>Other</option></select></div>
           </div>
-          <div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
+          </div>
+          <div id="occ5_block" style="display:none;margin-top:0.75rem;"><div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
             <div class="form-group"><label>Occupant 5 — Full Name</label><input type="text" name="occ5_name" placeholder="Full legal name"></div>
             <div class="form-group"><label>Relationship to Applicant</label><select name="occ5_rel"><option value="">— Select —</option><option>Spouse</option><option>Domestic Partner</option><option>Child</option><option>Parent</option><option>Sibling</option><option>Roommate</option><option>Friend</option><option>Co-Worker</option><option>Other</option></select></div>
           </div>
-          <div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
+          </div>
+          <div id="occ6_block" style="display:none;margin-top:0.75rem;"><div class="form-grid" style="background:var(--gray-light);padding:0.75rem;border-radius:6px;border:1px solid var(--gray-mid);">
             <div class="form-group"><label>Occupant 6 — Full Name</label><input type="text" name="occ6_name" placeholder="Full legal name"></div>
             <div class="form-group"><label>Relationship to Applicant</label><select name="occ6_rel"><option value="">— Select —</option><option>Spouse</option><option>Domestic Partner</option><option>Child</option><option>Parent</option><option>Sibling</option><option>Roommate</option><option>Friend</option><option>Co-Worker</option><option>Other</option></select></div>
+          </div>
           </div>
         </div>
         <hr class="divider">
         <div class="sub-heading">Vehicles — Street Parking Only</div>
         <div class="form-group"><label>Number of Vehicles</label><select name="vehicle_count"><option value="">— Select —</option><option>0</option><option>1</option><option>2</option></select></div>
-        <div class="form-group" style="margin-top:0.75rem;"><label>Vehicle(s) — Year, Make, Model, License Plate, State</label><textarea name="vehicles" placeholder="e.g.&#10;2019 Ford F-150, ABC-1234, ID"></textarea></div>
+        <div class="form-group" style="margin-top:0.75rem;"><label>Vehicle(s) — Year, Make, Model, License Plate, State <span id="veh_req_label" style="display:none;" class="req">&#10022;</span></label><textarea name="vehicles" placeholder="e.g.&#10;2019 Ford F-150, ABC-1234, ID"></textarea></div>
       </div>
     </div>
 
@@ -375,7 +383,7 @@
         <div class="sub-heading">Reference 1</div>
         <div class="form-grid">
           <div class="form-group"><label>Full Name <span class="req">✦</span></label><input type="text" name="ref1_name" required></div>
-          <div class="form-group"><label>Relationship</label><input type="text" name="ref1_rel" placeholder="e.g. Coworker"></div>
+          <div class="form-group"><label>Relationship <span class="req">&#10022;</span></label><input type="text" name="ref1_rel" placeholder="e.g. Coworker" required></div>
           <div class="form-group"><label>Phone <span class="req">✦</span></label><input type="tel" name="ref1_phone" placeholder="(xxx) xxx-xxxx" required></div>
         </div>
         <hr class="divider">
@@ -440,8 +448,8 @@
         <div class="policy-box" style="margin-top:1rem;">
           <h4>Unit B — Specific Rules</h4>
           <ul>
-            <li>Tenant in Unit B has exclusive access to the designated Unit B backyard area only.</li>
-            <li>Unit A backyard is private and strictly off-limits to Unit B tenants.</li>
+            <li>Tenant in Unit B has exclusive access to the Fenced Backyard — Shared Between Unit B and Unit C.</li>
+            <li>Unit A backyard is separated by a privacy fence and is strictly off-limits to Unit B tenants at all times.</li>
             <li>Parking is street parking only — no dedicated off-street space is included.</li>
             <li>Tenant shall use the Unit B exterior entrance at all times — access to Unit A is strictly prohibited.</li>
           </ul>
@@ -505,58 +513,142 @@
 
 <script src="availability.js"></script>
 <script>
-  // AVAILABILITY CHECK
+  // Availability
   if (typeof unitB_available !== 'undefined' && !unitB_available) {
     document.getElementById('rentalApp').style.display = 'none';
-    var unavailMsg = document.createElement('div');
-    unavailMsg.style.cssText = 'background:#c0392b;color:#fff;border-radius:8px;padding:2rem;text-align:center;margin:2rem 0;';
-    unavailMsg.innerHTML = '<div style="font-size:2rem;margin-bottom:0.8rem;">🔒</div><h2 style="font-family:Playfair Display,serif;font-size:1.4rem;margin-bottom:0.6rem;">Unit B is Currently Occupied</h2><p style="font-size:0.88rem;opacity:0.85;line-height:1.7;">This unit is not available at this time. Please check back later or contact us to be added to our waitlist.</p><p style="margin-top:1rem;font-size:0.85rem;"><strong>(208) 268-8838 · DavidsonProperties@pm.me</strong></p><a href="index.html" style="display:inline-block;margin-top:1.2rem;background:#fff;color:#c0392b;padding:0.7rem 1.5rem;border-radius:5px;text-decoration:none;font-weight:700;font-size:0.85rem;">← View Available Units</a>';
-    document.querySelector('.container').insertBefore(unavailMsg, document.getElementById('rentalApp'));
+    var m = document.createElement('div');
+    m.style.cssText = 'background:#c0392b;color:#fff;border-radius:8px;padding:2rem;text-align:center;margin:2rem 0;';
+    m.innerHTML = '<div style="font-size:2rem;margin-bottom:0.8rem;">&#128274;</div><h2 style="font-family:Playfair Display,serif;font-size:1.4rem;margin-bottom:0.6rem;">Unit B is Currently Occupied</h2><p style="font-size:0.88rem;opacity:0.85;line-height:1.7;">This unit is not available. Please check back or contact us.</p><p style="margin-top:1rem;font-size:0.85rem;"><strong>(208) 268-8838 &middot; DavidsonProperties@pm.me</strong></p><a href="index.html" style="display:inline-block;margin-top:1.2rem;background:#fff;color:#c0392b;padding:0.7rem 1.5rem;border-radius:5px;text-decoration:none;font-weight:700;font-size:0.85rem;">&#8592; View Available Units</a>';
+    document.querySelector('.container').insertBefore(m, document.getElementById('rentalApp'));
   }
 
-  const pricesB = { 'Month-to-Month — $1,500/mo': '$1,500', '6 Months — $1,475/mo': '$1,475', '12 Months — $1,450/mo': '$1,450', '15 Months — $1,400/mo': '$1,400' };
-  document.querySelectorAll('input[name="lease_term"]').forEach(r => {
+  // Populate year dropdowns
+  (function() {
+    var cy = new Date().getFullYear();
+    document.querySelectorAll('.year-select').forEach(function(s) {
+      for (var y = cy; y >= cy - 35; y--) {
+        var o = document.createElement('option'); o.value = y; o.textContent = y; s.appendChild(o);
+      }
+    });
+  })();
+
+  // 3-year residency check — previous address required if < 36 months
+  function checkResidency() {
+    var sm = document.querySelector('[name="curr_start_month"]');
+    var sy = document.querySelector('[name="curr_start_year"]');
+    var em = document.querySelector('[name="curr_end_month"]');
+    var ey = document.querySelector('[name="curr_end_year"]');
+    if (!sm || !sy || !sm.value || !sy.value) return;
+    var start = new Date(parseInt(sy.value), parseInt(sm.value) - 1);
+    var end = (em.value === 'present' || ey.value === 'present' || !em.value || !ey.value)
+              ? new Date()
+              : new Date(parseInt(ey.value), parseInt(em.value) - 1);
+    var months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+    var req = months < 36;
+    var prevSec = document.getElementById('prev_section');
+    var note = document.getElementById('prev_req_note');
+    if (prevSec) prevSec.style.borderLeft = req ? '3px solid var(--gold)' : '';
+    if (note) note.style.display = req ? 'inline-block' : 'none';
+    ['prev_addr','prev_city','prev_state','prev_zip','prev_rent'].forEach(function(n) {
+      var el = document.querySelector('[name="' + n + '"]');
+      if (el) el.required = req;
+    });
+  }
+  ['curr_start_month','curr_start_year','curr_end_month','curr_end_year'].forEach(function(n) {
+    var el = document.querySelector('[name="' + n + '"]');
+    if (el) el.addEventListener('change', checkResidency);
+  });
+
+  // Dynamic occupant blocks
+  var totSel = document.querySelector('[name="total_occupants"]');
+  if (totSel) {
+    totSel.addEventListener('change', function() {
+      var count = parseInt(this.value) || 0;
+      var max = parseInt(this.dataset.max) || 6;
+      for (var i = 2; i <= max; i++) {
+        var blk = document.getElementById('occ' + i + '_block');
+        var inp = document.querySelector('[name="occ' + i + '_name"]');
+        if (blk) blk.style.display = (i <= count) ? '' : 'none';
+        if (inp) inp.required = (i <= count);
+      }
+    });
+  }
+
+  // Vehicle textarea required if >= 1
+  var vSel = document.querySelector('[name="vehicle_count"]');
+  var vTxt = document.querySelector('[name="vehicles"]');
+  if (vSel && vTxt) {
+    vSel.addEventListener('change', function() {
+      var c = parseInt(this.value) || 0;
+      vTxt.required = c >= 1;
+    });
+  }
+
+  // Lease term pricing
+  var prices = {'Month-to-Month — $1,500/mo':'$1,500','6 Months — $1,475/mo':'$1,475','12 Months — $1,450/mo':'$1,450','15 Months — $1,400/mo':'$1,400'};
+  document.querySelectorAll('[name="lease_term"]').forEach(function(r) {
     r.addEventListener('change', function() {
-      document.getElementById('depositDisplay').textContent = pricesB[this.value] || '—';
-      document.querySelectorAll('.price-option').forEach(el => el.classList.remove('selected'));
+      var dd = document.getElementById('depositDisplay');
+      if (dd) dd.textContent = prices[this.value] || '—';
+      document.querySelectorAll('.price-option').forEach(function(el) { el.classList.remove('selected'); });
       this.closest('.price-option').classList.add('selected');
     });
   });
-  document.querySelectorAll('input[name="has_pet"]').forEach(r => {
-    r.addEventListener('change', function() { document.getElementById('petBox').style.display = this.value === 'Yes' ? 'block' : 'none'; });
-  });
-  document.querySelector('input[name="sig_date"]').valueAsDate = new Date();
-  const form = document.getElementById('rentalApp');
 
-  // Military service toggle
-  document.querySelectorAll('input[name="military_service"]').forEach(function(r) {
+  // Pet box toggle
+  document.querySelectorAll('[name="has_pet"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+      var pb = document.getElementById('petBox');
+      if (pb) pb.style.display = this.value === 'Yes' ? 'block' : 'none';
+    });
+  });
+
+  // Military toggle
+  document.querySelectorAll('[name="military_service"]').forEach(function(r) {
     r.addEventListener('change', function() {
       var d = document.getElementById('mil_detail');
       if (d) d.style.display = this.value === 'Yes' ? 'block' : 'none';
     });
   });
 
-  // Move-in date: min = today, max = today + 30 days
-  (function(){
-    var mi = document.querySelector('input[name="move_in_date"], input[name="move_in"]');
-    if(!mi) return;
-    var today = new Date();
-    var max   = new Date(today); max.setDate(today.getDate()+30);
-    var fmt   = function(d){ return d.toISOString().split('T')[0]; };
-    mi.setAttribute('min', fmt(today));
-    mi.setAttribute('max', fmt(max));
-    mi.setAttribute('placeholder','Select within 30 days');
+  // Move-in date 30-day limit
+  (function() {
+    var mi = document.querySelector('[name="move_in"]');
+    if (!mi) return;
+    var t = new Date(), mx = new Date(t);
+    mx.setDate(t.getDate() + 30);
+    mi.min = t.toISOString().split('T')[0];
+    mi.max = mx.toISOString().split('T')[0];
   })();
 
+  // Sig date auto-fill
+  var sd = document.querySelector('[name="sig_date"]');
+  if (sd) sd.valueAsDate = new Date();
+
+  // ── FORM SUBMIT → SQUARE PAYMENT REDIRECT ──────────────────────
+  var form = document.getElementById('rentalApp');
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
-    const btn = form.querySelector('.submit-btn');
-    btn.textContent = 'Submitting...'; btn.disabled = true;
+    var btn = form.querySelector('.submit-btn');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-      if (res.ok) { window.location.href = 'https://square.link/u/kHQoWnBa'; }
-      else throw new Error();
-    } catch { btn.textContent = 'Error — Please Call (208) 268-8838'; btn.style.background = '#c0392b'; btn.style.color = '#fff'; btn.disabled = false; }
+      var res = await fetch('https://formspree.io/f/xeedpnja', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        window.location.href = 'https://square.link/u/kHQoWnBa';
+      } else {
+        throw new Error('server');
+      }
+    } catch(err) {
+      btn.textContent = 'Error — Please Call (208) 268-8838';
+      btn.style.background = '#c0392b';
+      btn.style.color = '#fff';
+      btn.disabled = false;
+    }
   });
 </script>
 </body>
