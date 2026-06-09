@@ -24,7 +24,7 @@ var unitB_available = false;
 var unitB_on_hold   = false;
 
 // UNIT C — Lofted Studio / Detached
-var unitC_available = true;
+var unitC_available = false;
 var unitC_on_hold   = false;
 
 
